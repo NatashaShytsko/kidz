@@ -1,0 +1,68 @@
+$color1: #f0c24b;
+$color2: #b5d56a;
+$color3: #ea7066;
+$color4: #84bed6;
+$color5: #a597e7;
+$color6: #ea77ad;
+$color7: #2f3c43;
+$color-white: white;
+
+$font1: 'Open Sans', sans-serif;
+$font-size: 14px;
+@import "fonts.scss";
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.strip{
+  height: 2px;
+  background: linear-gradient(90deg, $color1 0%, $color1 8.333%, $color2 8.333%, $color2 16.666%, $color3 16.666%, $color3 25%, $color4 25%, $color4 33.333%, $color5 33.333%, $color5 41.666%, $color6 41.666%, $color6 50%, $color1 50%, $color1 58.333%, $color2 58.333%, $color2 66.666%, $color3 66.666%, $color3 75%, $color4 75%, $color4 83.333%, $color5 83.333%, $color5 91.666%, $color6 91.666%, $color6 100%);
+}
+.top {
+  background-color: $color7;
+  font: $font-size $font1;
+  color: $color-white;
+  padding: 10px 0;
+  .row {
+    justify-content: space-between;
+    .top-section {
+      display: inline-block;
+      margin: auto 0;
+      div{
+        display: inline-block;
+        margin-right: 20px;
+        i, span{
+          display: inline-block;
+        }
+        .circle{
+          padding: 5px;
+          border-radius: 15px;
+          margin-right: 10px;
+        }
+        .icon-mail-alt{
+          background-color: $color1;
+        }
+        .icon-phone{
+          background-color: $color2;
+        }
+        .icon-clock{
+          background-color: $color6;
+        }
+        .icon-globe{
+          background-color: $color4;
+        }
+        .icon-lock-open-alt{
+          background-color: $color5;
+        }
+        .icon-shopping-basket{
+          background-color: $color3;
+          padding: 10px;
+          border-radius: 10px;
+        }
+
+      }
+    }
+  }
+}

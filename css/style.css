@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot") format("embedded-opentype"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype"), url("../fonts/fontello.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+.strip {
+  height: 2px;
+  background: linear-gradient(90deg, #f0c24b 0%, #f0c24b 8.333%, #b5d56a 8.333%, #b5d56a 16.666%, #ea7066 16.666%, #ea7066 25%, #84bed6 25%, #84bed6 33.333%, #a597e7 33.333%, #a597e7 41.666%, #ea77ad 41.666%, #ea77ad 50%, #f0c24b 50%, #f0c24b 58.333%, #b5d56a 58.333%, #b5d56a 66.666%, #ea7066 66.666%, #ea7066 75%, #84bed6 75%, #84bed6 83.333%, #a597e7 83.333%, #a597e7 91.666%, #ea77ad 91.666%, #ea77ad 100%); }
+
+.top {
+  background-color: #2f3c43;
+  font: 14px "Open Sans", sans-serif;
+  color: white;
+  padding: 10px 0; }
+  .top .row {
+    justify-content: space-between; }
+    .top .row .top-section {
+      display: inline-block;
+      margin: auto 0; }
+      .top .row .top-section div {
+        display: inline-block;
+        margin-right: 20px; }
+        .top .row .top-section div i, .top .row .top-section div span {
+          display: inline-block; }
+        .top .row .top-section div .circle {
+          padding: 5px;
+          border-radius: 15px;
+          margin-right: 10px; }
+        .top .row .top-section div .icon-mail-alt {
+          background-color: #f0c24b; }
+        .top .row .top-section div .icon-phone {
+          background-color: #b5d56a; }
+        .top .row .top-section div .icon-clock {
+          background-color: #ea77ad; }
+        .top .row .top-section div .icon-globe {
+          background-color: #84bed6; }
+        .top .row .top-section div .icon-lock-open-alt {
+          background-color: #a597e7; }
+        .top .row .top-section div .icon-shopping-basket {
+          background-color: #ea7066;
+          padding: 10px;
+          border-radius: 10px; }
+
+/*# sourceMappingURL=style.css.map */
