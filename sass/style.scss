@@ -6,10 +6,19 @@ $color5: #a597e7;
 $color6: #ea77ad;
 $color7: #2f3c43;
 $color-white: white;
+$color-black: black;
 
 $font1: 'Open Sans', sans-serif;
 $font-size: 14px;
 @import "fonts.scss";
+@mixin config-icon-colors($class, $prefix, $prop, $colors...) {
+  @each $i in $colors {
+    .#{$prefix}#{nth($i, 1)} {
+      @extend #{$class};
+      #{$prop}: nth($i, 2);
+    }
+  }
+}
 
 body{
   margin: 0;
@@ -41,27 +50,83 @@ body{
           border-radius: 15px;
           margin-right: 10px;
         }
-        .icon-mail-alt{
-          background-color: $color1;
-        }
-        .icon-phone{
-          background-color: $color2;
-        }
-        .icon-clock{
-          background-color: $color6;
-        }
-        .icon-globe{
-          background-color: $color4;
-        }
-        .icon-lock-open-alt{
-          background-color: $color5;
-        }
+        @include config-icon-colors('.circle', 'icon-', 'background-color',
+                'mail-alt'   $color1,
+                'phone' $color2,
+                'clock' $color6,
+                'globe' $color4,
+                'lock-open-alt' $color5,
+                'shopping-basket' $color3
+        );
         .icon-shopping-basket{
-          background-color: $color3;
           padding: 10px;
           border-radius: 10px;
         }
 
+      }
+    }
+  }
+}
+header{
+  .row{
+    justify-content: space-between;
+    div, nav{
+      display: inline-block;
+      padding: 30px 0;
+    }
+    nav{
+      ul{
+        li{
+          display: inline-block;
+          list-style: none;
+          text-align: center;
+          :last-child{
+            border-right: none;
+          }
+          .active, :hover{
+              text-decoration: none;
+              @include config-icon-colors('span', 'icon-', 'color',
+                      'home + span'   $color1,
+                      'doc-text + span' $color2,
+                      'list-bullet + span' $color3,
+                      'edit + span' $color4,
+                      'calendar + span' $color5,
+                      'gg + span' $color6
+              );
+          }
+          a{
+            span{
+              color: $color-black;
+              font: $font-size + 1 $font1;
+              font-weight: bold;
+              display: block;
+              margin-top: 10px;
+              padding: 0 30px;
+              border-right: solid 2px;
+            }
+            @include config-icon-colors('span', 'icon-', 'border-color',
+                    'home + span'   $color1,
+                    'doc-text + span' $color2,
+                    'list-bullet + span' $color3,
+                    'edit + span' $color4,
+                    'calendar + span' $color5
+            );
+            .menucircle {
+              display: inline-block;
+              color: $color-white;
+              padding: 10px;
+              border-radius: 25px;
+            }
+            @include config-icon-colors('.menucircle', 'icon-', 'background-color',
+                    'home'   $color1,
+                    'doc-text' $color2,
+                    'list-bullet' $color3,
+                    'edit' $color4,
+                    'calendar' $color5,
+                    'gg' $color6
+            );
+          }
+        }
       }
     }
   }

@@ -26,9 +26,9 @@ body {
       .top .row .top-section div {
         display: inline-block;
         margin-right: 20px; }
-        .top .row .top-section div i, .top .row .top-section div span {
+        .top .row .top-section div i, .top .row .top-section div span, .top header .row .top-section div nav ul li .active .icon-home + span, header .top .row .top-section div nav ul li .active .icon-home + span, .top header .row nav ul li .active .top-section div .icon-home + span, header .top .row nav ul li .active .top-section div .icon-home + span, .top header .row .top-section div nav ul li :hover .icon-home + span, header .top .row .top-section div nav ul li :hover .icon-home + span, .top header .row nav ul li :hover .top-section div .icon-home + span, header .top .row nav ul li :hover .top-section div .icon-home + span, .top header .row .top-section div nav ul li .active .icon-doc-text + span, header .top .row .top-section div nav ul li .active .icon-doc-text + span, .top header .row nav ul li .active .top-section div .icon-doc-text + span, header .top .row nav ul li .active .top-section div .icon-doc-text + span, .top header .row .top-section div nav ul li :hover .icon-doc-text + span, header .top .row .top-section div nav ul li :hover .icon-doc-text + span, .top header .row nav ul li :hover .top-section div .icon-doc-text + span, header .top .row nav ul li :hover .top-section div .icon-doc-text + span, .top header .row .top-section div nav ul li .active .icon-list-bullet + span, header .top .row .top-section div nav ul li .active .icon-list-bullet + span, .top header .row nav ul li .active .top-section div .icon-list-bullet + span, header .top .row nav ul li .active .top-section div .icon-list-bullet + span, .top header .row .top-section div nav ul li :hover .icon-list-bullet + span, header .top .row .top-section div nav ul li :hover .icon-list-bullet + span, .top header .row nav ul li :hover .top-section div .icon-list-bullet + span, header .top .row nav ul li :hover .top-section div .icon-list-bullet + span, .top header .row .top-section div nav ul li .active .icon-edit + span, header .top .row .top-section div nav ul li .active .icon-edit + span, .top header .row nav ul li .active .top-section div .icon-edit + span, header .top .row nav ul li .active .top-section div .icon-edit + span, .top header .row .top-section div nav ul li :hover .icon-edit + span, header .top .row .top-section div nav ul li :hover .icon-edit + span, .top header .row nav ul li :hover .top-section div .icon-edit + span, header .top .row nav ul li :hover .top-section div .icon-edit + span, .top header .row .top-section div nav ul li .active .icon-calendar + span, header .top .row .top-section div nav ul li .active .icon-calendar + span, .top header .row nav ul li .active .top-section div .icon-calendar + span, header .top .row nav ul li .active .top-section div .icon-calendar + span, .top header .row .top-section div nav ul li :hover .icon-calendar + span, header .top .row .top-section div nav ul li :hover .icon-calendar + span, .top header .row nav ul li :hover .top-section div .icon-calendar + span, header .top .row nav ul li :hover .top-section div .icon-calendar + span, .top header .row .top-section div nav ul li .active .icon-gg + span, header .top .row .top-section div nav ul li .active .icon-gg + span, .top header .row nav ul li .active .top-section div .icon-gg + span, header .top .row nav ul li .active .top-section div .icon-gg + span, .top header .row .top-section div nav ul li :hover .icon-gg + span, header .top .row .top-section div nav ul li :hover .icon-gg + span, .top header .row nav ul li :hover .top-section div .icon-gg + span, header .top .row nav ul li :hover .top-section div .icon-gg + span {
           display: inline-block; }
-        .top .row .top-section div .circle {
+        .top .row .top-section div .circle, .top .row .top-section div .icon-mail-alt, .top .row .top-section div .icon-phone, .top .row .top-section div .icon-clock, .top .row .top-section div .icon-globe, .top .row .top-section div .icon-lock-open-alt, .top .row .top-section div .icon-shopping-basket {
           padding: 5px;
           border-radius: 15px;
           margin-right: 10px; }
@@ -43,8 +43,70 @@ body {
         .top .row .top-section div .icon-lock-open-alt {
           background-color: #a597e7; }
         .top .row .top-section div .icon-shopping-basket {
-          background-color: #ea7066;
+          background-color: #ea7066; }
+        .top .row .top-section div .icon-shopping-basket {
           padding: 10px;
           border-radius: 10px; }
+
+header .row {
+  justify-content: space-between; }
+  header .row div, header .row nav {
+    display: inline-block;
+    padding: 30px 0; }
+  header .row nav ul li {
+    display: inline-block;
+    list-style: none;
+    text-align: center; }
+    header .row nav ul li :last-child {
+      border-right: none; }
+    header .row nav ul li .active, header .row nav ul li :hover {
+      text-decoration: none; }
+      header .row nav ul li .active .icon-home + span, header .row nav ul li .active :hover .icon-home + span, header .row nav ul li .active a .icon-home + span, header .row nav ul li :hover .active .icon-home + span, header .row nav ul li :hover .icon-home + span, header .row nav ul li :hover a .icon-home + span {
+        color: #f0c24b; }
+      header .row nav ul li .active .icon-doc-text + span, header .row nav ul li .active :hover .icon-doc-text + span, header .row nav ul li .active a .icon-doc-text + span, header .row nav ul li :hover .active .icon-doc-text + span, header .row nav ul li :hover .icon-doc-text + span, header .row nav ul li :hover a .icon-doc-text + span {
+        color: #b5d56a; }
+      header .row nav ul li .active .icon-list-bullet + span, header .row nav ul li .active :hover .icon-list-bullet + span, header .row nav ul li .active a .icon-list-bullet + span, header .row nav ul li :hover .active .icon-list-bullet + span, header .row nav ul li :hover .icon-list-bullet + span, header .row nav ul li :hover a .icon-list-bullet + span {
+        color: #ea7066; }
+      header .row nav ul li .active .icon-edit + span, header .row nav ul li .active :hover .icon-edit + span, header .row nav ul li .active a .icon-edit + span, header .row nav ul li :hover .active .icon-edit + span, header .row nav ul li :hover .icon-edit + span, header .row nav ul li :hover a .icon-edit + span {
+        color: #84bed6; }
+      header .row nav ul li .active .icon-calendar + span, header .row nav ul li .active :hover .icon-calendar + span, header .row nav ul li .active a .icon-calendar + span, header .row nav ul li :hover .active .icon-calendar + span, header .row nav ul li :hover .icon-calendar + span, header .row nav ul li :hover a .icon-calendar + span {
+        color: #a597e7; }
+      header .row nav ul li .active .icon-gg + span, header .row nav ul li .active :hover .icon-gg + span, header .row nav ul li .active a .icon-home.icon-gg + span, header .row nav ul li .active a .icon-doc-text.icon-gg + span, header .row nav ul li .active a .icon-list-bullet.icon-gg + span, header .row nav ul li .active a .icon-edit.icon-gg + span, header .row nav ul li .active a .icon-calendar.icon-gg + span, header .row nav ul li :hover .active .icon-gg + span, header .row nav ul li :hover .icon-gg + span, header .row nav ul li :hover a .icon-home.icon-gg + span, header .row nav ul li :hover a .icon-doc-text.icon-gg + span, header .row nav ul li :hover a .icon-list-bullet.icon-gg + span, header .row nav ul li :hover a .icon-edit.icon-gg + span, header .row nav ul li :hover a .icon-calendar.icon-gg + span {
+        color: #ea77ad; }
+    header .row nav ul li a span, header .row nav ul li a .active .icon-home + span, header .row nav ul li .active a .icon-home + span, header .row nav ul li a :hover .icon-home + span, header .row nav ul li :hover a .icon-home + span, header .row nav ul li a .active .icon-doc-text + span, header .row nav ul li .active a .icon-doc-text + span, header .row nav ul li a :hover .icon-doc-text + span, header .row nav ul li :hover a .icon-doc-text + span, header .row nav ul li a .active .icon-list-bullet + span, header .row nav ul li .active a .icon-list-bullet + span, header .row nav ul li a :hover .icon-list-bullet + span, header .row nav ul li :hover a .icon-list-bullet + span, header .row nav ul li a .active .icon-edit + span, header .row nav ul li .active a .icon-edit + span, header .row nav ul li a :hover .icon-edit + span, header .row nav ul li :hover a .icon-edit + span, header .row nav ul li a .active .icon-calendar + span, header .row nav ul li .active a .icon-calendar + span, header .row nav ul li a :hover .icon-calendar + span, header .row nav ul li :hover a .icon-calendar + span, header .row nav ul li a .active .icon-gg + span, header .row nav ul li .active a .icon-gg + span, header .row nav ul li a :hover .icon-gg + span, header .row nav ul li :hover a .icon-gg + span, header .row nav ul li a .icon-home + span, header .row nav ul li a .icon-doc-text + span, header .row nav ul li a .icon-list-bullet + span, header .row nav ul li a .icon-edit + span, header .row nav ul li a .icon-calendar + span {
+      color: black;
+      font: 15px "Open Sans", sans-serif;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      padding: 0 30px;
+      border-right: solid 2px; }
+    header .row nav ul li a .active .icon-home + span, header .row nav ul li .active a .icon-home + span, header .row nav ul li a :hover .icon-home + span, header .row nav ul li :hover a .icon-home + span, header .row nav ul li a .icon-home + span {
+      border-color: #f0c24b; }
+    header .row nav ul li a .active .icon-doc-text + span, header .row nav ul li .active a .icon-doc-text + span, header .row nav ul li a :hover .icon-doc-text + span, header .row nav ul li :hover a .icon-doc-text + span, header .row nav ul li a .icon-doc-text + span {
+      border-color: #b5d56a; }
+    header .row nav ul li a .active .icon-list-bullet + span, header .row nav ul li .active a .icon-list-bullet + span, header .row nav ul li a :hover .icon-list-bullet + span, header .row nav ul li :hover a .icon-list-bullet + span, header .row nav ul li a .icon-list-bullet + span {
+      border-color: #ea7066; }
+    header .row nav ul li a .active .icon-edit + span, header .row nav ul li .active a .icon-edit + span, header .row nav ul li a :hover .icon-edit + span, header .row nav ul li :hover a .icon-edit + span, header .row nav ul li a .icon-edit + span {
+      border-color: #84bed6; }
+    header .row nav ul li a .active .icon-calendar + span, header .row nav ul li .active a .icon-calendar + span, header .row nav ul li a :hover .icon-calendar + span, header .row nav ul li :hover a .icon-calendar + span, header .row nav ul li a .icon-calendar + span {
+      border-color: #a597e7; }
+    header .row nav ul li a .menucircle, header .row nav ul li a .icon-home, header .row nav ul li a .icon-doc-text, header .row nav ul li a .icon-list-bullet, header .row nav ul li a .icon-edit, header .row nav ul li a .icon-calendar, header .row nav ul li a .icon-gg {
+      display: inline-block;
+      color: white;
+      padding: 10px;
+      border-radius: 25px; }
+    header .row nav ul li a .icon-home {
+      background-color: #f0c24b; }
+    header .row nav ul li a .icon-doc-text {
+      background-color: #b5d56a; }
+    header .row nav ul li a .icon-list-bullet {
+      background-color: #ea7066; }
+    header .row nav ul li a .icon-edit {
+      background-color: #84bed6; }
+    header .row nav ul li a .icon-calendar {
+      background-color: #a597e7; }
+    header .row nav ul li a .icon-gg {
+      background-color: #ea77ad; }
 
 /*# sourceMappingURL=style.css.map */
