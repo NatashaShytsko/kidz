@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -36,20 +37,38 @@
             <div class="logo"><img src="img\logo.png" alt="Logo Kidz School"></div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active"><i class="menucircle icon-home"></i><span>Home</span></a></li>
-                    <li><a href="#"><i class="menucircle icon-doc-text"></i><span>Courses</span></a></li>
-                    <li><a href=""><i class="menucircle icon-list-bullet"></i><span>Pages</span></a></li>
-                    <li><a href=""><i class="menucircle icon-edit"></i><span>Blog</span></a></li>
-                    <li><a href=""><i class="menucircle icon-calendar"></i><span>Events</span></a></li>
-                    <li><a href=""><i class="menucircle icon-gg"></i><span>Components</span></a></li>
+                    <li><a href="#" class="active"><i class="menucircle icon-home"></i><span class="textmenu">Home</span></a></li>
+                    <li><a href="#"><i class="menucircle icon-doc-text"></i><span class="textmenu">Courses</span></a></li>
+                    <li><a href=""><i class="menucircle icon-list-bullet"></i><span class="textmenu">Pages</span></a></li>
+                    <li><a href=""><i class="menucircle icon-edit"></i><span class="textmenu">Blog</span></a></li>
+                    <li><a href=""><i class="menucircle icon-calendar"></i><span class="textmenu">Events</span></a></li>
+                    <li><a href=""><i class="menucircle icon-gg"></i><span class="textmenu">Components</span></a></li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
-<section>
-    <div class="container">
-        <div class="row"></div>
+<section class="main-slider">
+    <div>
+        <img src="img/slider1.jpg" alt="slider1">
+        <div class="description">
+            <h1>Lorem Ipsum Dolar</h1>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor </span>
+        </div>
+    </div>
+    <div>
+        <img src="img/slider2.jpg" alt="slider2">
+        <div class="description">
+            <h1>Lorem Ipsum Dolar</h1>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor </span>
+        </div>
+    </div>
+    <div>
+        <img src="img/slider3.jpg" alt="slider3">
+        <div class="description">
+            <h1>Lorem Ipsum Dolar</h1>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor </span>
+        </div>
     </div>
 </section>
 <section>
@@ -93,5 +112,22 @@
 <section> <div class="container">
     <div class="row"></div>
 </div></section>
+
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $('.main-slider').slick({
+            infinite: true,
+            prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
+            nextArrow: '<button class="arrow next"><i class="icon-right-big"></i></button>',
+            autoplay: true,
+            autoplaySpeed: 4000
+    });
+    });
+</script>
 </body>
 </html>

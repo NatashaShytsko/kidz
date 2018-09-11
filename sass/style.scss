@@ -9,12 +9,13 @@ $color-white: white;
 $color-black: black;
 
 $font1: 'Open Sans', sans-serif;
-$font-size: 14px;
+$font2: 'Dosis', sans-serif;
+$font-size: 10px;
 @import "fonts.scss";
-@mixin config-icon-colors($class, $prefix, $prop, $colors...) {
+@mixin config-icon-colors($prefix, $prop, $colors...) {
   @each $i in $colors {
     .#{$prefix}#{nth($i, 1)} {
-      @extend #{$class};
+
       #{$prop}: nth($i, 2);
     }
   }
@@ -24,6 +25,7 @@ body{
   margin: 0;
   padding: 0;
   width: 100%;
+  font-size: $font-size;
 }
 .strip{
   height: 2px;
@@ -31,7 +33,7 @@ body{
 }
 .top {
   background-color: $color7;
-  font: $font-size $font1;
+  font: 1.4em $font1;
   color: $color-white;
   padding: 10px 0;
   .row {
@@ -50,7 +52,7 @@ body{
           border-radius: 15px;
           margin-right: 10px;
         }
-        @include config-icon-colors('.circle', 'icon-', 'background-color',
+        @include config-icon-colors('icon-', 'background-color',
                 'mail-alt'   $color1,
                 'phone' $color2,
                 'clock' $color6,
@@ -80,12 +82,10 @@ header{
           display: inline-block;
           list-style: none;
           text-align: center;
-          :last-child{
-            border-right: none;
-          }
+
           .active, :hover{
               text-decoration: none;
-              @include config-icon-colors('span', 'icon-', 'color',
+              @include config-icon-colors('icon-', 'color',
                       'home + span'   $color1,
                       'doc-text + span' $color2,
                       'list-bullet + span' $color3,
@@ -94,17 +94,19 @@ header{
                       'gg + span' $color6
               );
           }
+
           a{
-            span{
+            .textmenu{
               color: $color-black;
-              font: $font-size + 1 $font1;
+              font: 1.5em $font1;
               font-weight: bold;
               display: block;
               margin-top: 10px;
               padding: 0 30px;
               border-right: solid 2px;
+
             }
-            @include config-icon-colors('span', 'icon-', 'border-color',
+            @include config-icon-colors('icon-', 'border-color',
                     'home + span'   $color1,
                     'doc-text + span' $color2,
                     'list-bullet + span' $color3,
@@ -112,12 +114,14 @@ header{
                     'calendar + span' $color5
             );
             .menucircle {
+              font-size: 1.5em;
               display: inline-block;
               color: $color-white;
               padding: 10px;
               border-radius: 25px;
+
             }
-            @include config-icon-colors('.menucircle', 'icon-', 'background-color',
+            @include config-icon-colors('icon-', 'background-color',
                     'home'   $color1,
                     'doc-text' $color2,
                     'list-bullet' $color3,
@@ -126,8 +130,59 @@ header{
                     'gg' $color6
             );
           }
+          &:last-child .textmenu{
+            border-right: none;
+          }
         }
       }
     }
   }
+}
+.main-slider{
+  .arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 1.6em;
+    width: 3.2em;
+    height: 3.2em;
+    border: none;
+    z-index: 99;
+    background-color: $color-white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    &:hover, &:focus, &:active{
+      outline: none;
+      color: $color7*2;
+    }
+  }
+  .prev{
+    left: 2%;
+  }
+  .next{
+    right: 2%;
+  }
+  .slick-slide{
+
+    img{
+      width: 100%;
+    }
+    .description{
+      font-family: $font2;
+      color: $color-white;
+      position: absolute;
+      margin-top: -4%;
+      margin-left: 2%;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+      h1{
+        font-size: 5.2em;
+        font-weight: bold;
+      }
+      span{
+        font-size: 2.5em;
+        font-weight: 500;
+      }
+    }
+  }
+
 }
