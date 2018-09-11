@@ -302,6 +302,7 @@ header{
             padding: 15px;
             margin-right: 10px;
 
+
           }
           $colors: $color1, $color2, $color3, $color4, $color5, $color6;
           $i:0;
@@ -309,7 +310,8 @@ header{
             @each $col in icon-graduation-cap, icon-envira, icon-taxi, icon-food, icon-heart, icon-shield {
               $i: $i + 1;
               &.#{$col} {
-                box-shadow: 0px 0px 0px 4px nth($colors, $i);
+                box-shadow: 0px 0px 0px 4px nth($colors, $i),
+                4px 6px 0px 0px rgba(0, 0, 0, 0.1);
               }
             }
           }
@@ -345,6 +347,40 @@ header{
       color: nth($colors, $i);
     }
   }
+  padding-bottom: 5%;
+}
+.more{
+  background-color: #a5a5a5;
+  text-align: center;
+  padding: 5% 0;
+  h1{
+    font: 3.6em $font2;
+    color:  $color-white;
+    font-weight: bold;
+    line-height: 2em;
+  }
+  .text{
+    font: 1.5em $font1;
+    color: $color-white;
+  }
+  .button{
+    display: block;
+    a{
+      display: inline-block;
+      margin-top: 30px;
+      font: 1.6em $font1;
+      padding: 15px 20px;
+      background-color: $color3;
+      border-radius: 5px;
+      color: $color-white;
+      text-transform: uppercase;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+      &:hover{
+        text-decoration: none;
+        box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
+      }
     }
+  }
+}
 
 
