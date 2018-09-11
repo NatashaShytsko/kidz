@@ -121,7 +121,7 @@ header .row {
   z-index: 99;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2); }
   .main-slider .arrow:hover, .main-slider .arrow:focus, .main-slider .arrow:active {
     outline: none;
     color: #5e7886; }
@@ -137,7 +137,7 @@ header .row {
   position: absolute;
   margin-top: -4%;
   margin-left: 2%;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
   .main-slider .slick-slide .description h1 {
     font-size: 5.2em;
     font-weight: bold; }
@@ -152,7 +152,7 @@ header .row {
     position: relative;
     top: -100px;
     border-radius: 10px;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 0 15px; }
     .blocks .col-md-3 .block i {
