@@ -417,4 +417,79 @@ header .row {
   .courses .cards .col-md-3:nth-child(4) .block h3, .courses .cards .col-md-3:nth-child(4) .block .more-courses a:hover {
     color: #84bed6; }
 
+.meet {
+  padding: 5% 0;
+  background: url("../img/backmeet.png"); }
+  .meet .cap {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px; }
+    .meet .cap h1, .meet .cap .left, .meet .cap .right {
+      display: inline-block; }
+    .meet .cap h1 {
+      font: 3.6em "Dosis", sans-serif;
+      color: #ea7066;
+      font-weight: bold; }
+    .meet .cap span {
+      height: 1.7em;
+      width: 7em;
+      margin: 0 10px; }
+    .meet .cap .left {
+      background: url("../img/left.png") no-repeat; }
+    .meet .cap .right {
+      background: url("../img/right.png") no-repeat; }
+    .meet .cap h1 {
+      color: white; }
+  .meet .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 1.6em;
+    width: 3.2em;
+    height: 3.2em;
+    border: none;
+    z-index: 99;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2); }
+    .meet .arrow:hover, .meet .arrow:focus, .meet .arrow:active {
+      outline: none;
+      color: #5e7886; }
+  .meet .prev {
+    left: -2%; }
+  .meet .next {
+    right: -2%; }
+  .meet .teachers-slider .teachers {
+    text-align: center;
+    outline: none; }
+    .meet .teachers-slider .teachers img {
+      margin: 0 auto;
+      width: 150px; }
+    .meet .teachers-slider .teachers .hover {
+      display: none;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #2f3c43;
+      margin: -150px auto 0;
+      position: relative;
+      left: 0; }
+      .meet .teachers-slider .teachers .hover i {
+        margin: auto;
+        color: white;
+        font-size: 1.6em; }
+    .meet .teachers-slider .teachers h3 {
+      font: 2em "Open Sans", sans-serif;
+      color: white;
+      margin-top: 15px; }
+    .meet .teachers-slider .teachers .text {
+      font: 1.5em "Open Sans", sans-serif;
+      color: white;
+      opacity: 0.7; }
+  .meet .teachers-slider .slick-slide:hover .hover {
+    display: flex; }
+  .meet .teachers-slider .slick-slide:hover img {
+    visibility: hidden; }
+  .meet .teachers-slider .slick-slide:hover .hover i:hover, .meet .teachers-slider .slick-slide:hover h3 {
+    color: #f0c24b; }
+
 /*# sourceMappingURL=style.css.map */

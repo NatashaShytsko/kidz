@@ -138,22 +138,25 @@ header{
     }
   }
 }
+@mixin  arrow{
+          position: absolute;
+          top: 50%;
+          font-size: 1.6em;
+          width: 3.2em;
+          height: 3.2em;
+          border: none;
+          z-index: 99;
+          background-color: $color-white;
+          border-radius: 10px;
+          box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+          &:hover, &:focus, &:active{
+            outline: none;
+            color: $color7*2;
+          }
+        }
 .main-slider{
   .arrow{
-    position: absolute;
-    top: 50%;
-    font-size: 1.6em;
-    width: 3.2em;
-    height: 3.2em;
-    border: none;
-    z-index: 99;
-    background-color: $color-white;
-    border-radius: 10px;
-    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
-    &:hover, &:focus, &:active{
-      outline: none;
-      color: $color7*2;
-    }
+    @include arrow;
   }
   .prev{
     left: 2%;
@@ -471,5 +474,75 @@ header{
         color: nth($colors, $i);
       }
     }}
+}
+.meet{
+  padding: 5% 0;
+  background: url('../img/backmeet.png');
+  .cap{
+    @include cap;
+    h1 {
+      color: $color-white;
+    }
+  }
+  .arrow{
+    @include arrow;
+  }
+  .prev{
+    left: -2%;
+  }
+  .next{
+    right: -2%;
+  }
+  .teachers-slider{
+
+    .teachers{
+      text-align: center;
+      outline: none;
+      img{
+        margin: 0 auto;
+        width: 150px;
+      }
+      .hover{
+        display: none;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: $color7;
+        margin: -150px auto 0;
+        position: relative;
+        left: 0;
+        i{
+          margin: auto;
+          color: $color-white;
+          font-size: 1.6em;
+        }
+      }
+
+      h3{
+        font: 2em $font1;
+        color: $color-white;
+        margin-top: 15px;
+      }
+      .text{
+        font: 1.5em $font1;
+        color: $color-white;
+        opacity: 0.7;
+      }
+
+    }
+    .slick-slide {
+      &:hover .hover{
+        display: flex;
+
+      }
+      &:hover img{
+        visibility: hidden;
+
+      }
+      &:hover .hover i:hover, &:hover h3{
+        color: $color1;
+      }
+    }
+  }
 }
 

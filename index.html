@@ -250,9 +250,76 @@
         </div></div>
     </div>
 </section>
-<section>
+<section class="meet">
     <div class="container">
-        <div class="row"></div>
+        <div class="cap">
+            <span class="left"></span>
+            <h1>Meet Our Teachers</h1>
+            <span class="right"></span>
+        </div>
+
+        <div class="teachers-slider">
+        <div class="teachers">
+            <div><img src="img/teacher-1.png" alt="teacher-1">
+                <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a href=""></a></i><i
+                        class="icon-facebook"><a href=""></a>  </i><i class="icon-skype"><a href=""></a>       </i></div>
+                      <h3>Robert White</h3>
+                <span class="text">English Teacher</span></div>
+        </div>
+        <div class="teachers">
+            <div><img src="img/teacher-2.png" alt="teacher-2">
+                <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a href=""></a></i><i
+                        class="icon-facebook"><a href=""></a>  </i><i class="icon-skype"> <a href=""></a>     </i></div>
+                       <h3>Amands Stone</h3>
+                <span class="text">English Teacher</span></div>
+        </div>
+        <div class="teachers">
+            <div><img src="img/teacher-3.png" alt="teacher-3">
+                <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a href=""></a></i><i
+                        class="icon-facebook"><a href=""></a>  </i><i class="icon-skype"> <a href=""></a>  </i></div>
+                          <h3>Sarah Smith</h3>
+                <span class="text">Math Teacher</span></div>
+        </div>
+        <div class="teachers">
+            <div><img src="img/teacher-4.png" alt="teacher-4">
+                <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a href=""></a></i><i
+                        class="icon-facebook"><a href=""></a>  </i><i class="icon-skype"> <a href=""></a>    </i></div>
+                        <h3>Branda Wills</h3>
+                <span class="text">Babysitters</span></div>
+        </div>
+            <div class="teachers">
+                <div><img src="img/teacher-1.png" alt="teacher-1">
+                    <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a
+                            href=""></a></i><i
+                            class="icon-facebook"><a href=""></a></i><i class="icon-skype"><a href=""></a></i></div>
+                    <h3>Robert White</h3>
+                    <span class="text">English Teacher</span></div>
+            </div>
+            <div class="teachers">
+                <div><img src="img/teacher-2.png" alt="teacher-2">
+                    <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a
+                            href=""></a></i><i
+                            class="icon-facebook"><a href=""></a></i><i class="icon-skype"><a href=""></a></i></div>
+                    <h3>Amands Stone</h3>
+                    <span class="text">English Teacher</span></div>
+            </div>
+            <div class="teachers">
+                <div><img src="img/teacher-3.png" alt="teacher-3">
+                    <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a
+                            href=""></a></i><i
+                            class="icon-facebook"><a href=""></a></i><i class="icon-skype"><a href=""></a></i></div>
+                    <h3>Sarah Smith</h3>
+                    <span class="text">Math Teacher</span></div>
+            </div>
+            <div class="teachers">
+                <div><img src="img/teacher-4.png" alt="teacher-4">
+                    <div class="hover"><i class="icon-twitter"><a href=""></a></i><i class="icon-linkedin"><a
+                            href=""></a></i><i
+                            class="icon-facebook"><a href=""></a></i><i class="icon-skype"><a href=""></a></i></div>
+                    <h3>Branda Wills</h3>
+                    <span class="text">Babysitters</span></div>
+            </div>
+        </div>
     </div>
 </section>
 <section>
@@ -286,6 +353,17 @@
             autoplay: true,
             autoplaySpeed: 4000
     });
+    });
+    $(document).ready(function(){
+        $('.teachers-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            ariableWidth: true,
+            visibleWidth: true,
+            prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
+            nextArrow: '<button class="arrow next"><i class="icon-right-big"></i></button>',
+        });
     });
 </script>
 </body>
