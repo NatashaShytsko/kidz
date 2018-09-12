@@ -289,22 +289,26 @@ header{
   font: 1.4em $font1;
   color:  #666666;
 }
+@mixin buttona{
+    display: inline-block;
+    margin-top: 30px;
+    font: 1.6em $font1;
+    padding: 15px 20px;
+    background-color: $color3;
+    border-radius: 5px;
+    color: $color-white;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+    &:hover{
+      text-decoration: none;
+      box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
+    }
+
+}
 @mixin button{
          display: block;
          a{
-           display: inline-block;
-           margin-top: 30px;
-           font: 1.6em $font1;
-           padding: 15px 20px;
-           background-color: $color3;
-           border-radius: 5px;
-           color: $color-white;
-           text-transform: uppercase;
-           box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
-           &:hover{
-             text-decoration: none;
-             box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
-           }
+           @include buttona;
          }
        }
 .features{
@@ -545,4 +549,99 @@ header{
     }
   }
 }
+.our-gallery{
+  padding: 5% 0;
+  text-align: center;
+  position: relative;
+  .cap{
+    @include cap;
+  }
 
+  .gallery_product{
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+i{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color-white;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid $color-white;
+}
+    &:hover{
+
+      img{
+        filter: brightness(50%) blur(1px);
+      }
+      i{
+        display: block;
+        &:hover{
+          color: $color1;
+          border-color: $color1 ;
+        }
+      }
+    }
+  }
+  .filter-button
+  {
+    @include buttona;
+    font-size: 1.4em;
+    color: $color-black;
+    background-color: #f8f8f8;
+    padding: 11px 20px;
+    margin: 0 5px 5% ;
+    &:hover, &.active{
+      color: $color-white;
+      background-color: $color3;
+    }
+
+  }
+
+  .port-image
+  {
+    width: 100%;
+  }
+
+  .gallery_product
+  {
+    margin-bottom: 30px;
+  }
+  .button{
+    @include button;
+  }
+
+
+}
+.popup {
+  position: absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+.popup_bg {
+  background:rgba(0,0,0,0.4);
+  position:absolute;
+  z-index:1;
+  height:100%;
+  width:100%;
+}
+
+
+.popup_img {
+  position: relative;
+  margin:0 auto;
+  z-index:2;
+  max-height:94%;
+  max-width:94%;
+  margin:1% 0 0 0;
+}

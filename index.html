@@ -12,6 +12,7 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/popup_img.js"></script>
 </head>
 <body>
 <section class="strip"></section>
@@ -322,9 +323,70 @@
         </div>
     </div>
 </section>
-<section>
+<section class="our-gallery">
     <div class="container">
-        <div class="row"></div>
+        <div class="cap">
+            <span class="left"></span>
+            <h1>Our Gallery</h1>
+            <span class="right"></span>
+        </div>
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <div class="buttons">
+                <button class="btn btn-default filter-button active" data-filter="all">view All</button>
+                <button class="btn btn-default filter-button" data-filter="charity">Charity</button>
+                <button class="btn btn-default filter-button" data-filter="nature">nature</button>
+                <button class="btn btn-default filter-button" data-filter="children">children</button>
+            </div>  </div>
+            <br/>
+
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter charity">
+
+
+                    <img src="img/gallery-1.jpg" class="img-responsive">
+                <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter nature">
+                <img src="img/gallery-2.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter children">
+                <img src="img/gallery-3.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter children">
+                <img src="img/gallery-4.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter nature">
+                <img src="img/gallery-5.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter charity">
+                <img src="img/gallery-6.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter children">
+                <img src="img/gallery-7.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter nature">
+                <img src="img/gallery-8.jpg" class="img-responsive">
+                 <i class="icon-search image"></i>
+            </div>
+
+        </div>
+        <div class="button"><a href="" >view more</a></div>
     </div>
 </section>
 <section>
@@ -360,11 +422,59 @@
             slidesToScroll: 1,
             infinite: true,
             ariableWidth: true,
-            visibleWidth: true,
             prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
             nextArrow: '<button class="arrow next"><i class="icon-right-big"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2,
+                        prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
+                        nextArrow: '<button class="arrow next"><i class="icon-right-big"></i></button>',
+                        centerPadding: '40px'
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
+                        nextArrow: '<button class="arrow next"><i class="icon-right-big"></i></button>',
+
+
+                    }
+                }
+            ]
         });
     });
+    $(document).ready(function(){
+
+        $(".filter-button").click(function(){
+            var value = $(this).attr('data-filter');
+
+            if(value == "all")
+            {
+                //$('.filter').removeClass('hidden');
+                $('.filter').show('1000');
+            }
+            else
+            {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                $(".filter").not('.'+value).hide('3000');
+                $('.filter').filter('.'+value).show('3000');
+
+            }
+            if ($(".filter-button").removeClass("active")) {
+                $(this).removeClass("active");
+            }
+            $(this).addClass("active");
+        });
+
+
+
+    });
+
 </script>
 </body>
 </html>

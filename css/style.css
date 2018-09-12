@@ -492,4 +492,112 @@ header .row {
   .meet .teachers-slider .slick-slide:hover .hover i:hover, .meet .teachers-slider .slick-slide:hover h3 {
     color: #f0c24b; }
 
+.our-gallery {
+  padding: 5% 0;
+  text-align: center;
+  position: relative; }
+  .our-gallery .cap {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px; }
+    .our-gallery .cap h1, .our-gallery .cap .left, .our-gallery .cap .right {
+      display: inline-block; }
+    .our-gallery .cap h1 {
+      font: 3.6em "Dosis", sans-serif;
+      color: #ea7066;
+      font-weight: bold; }
+    .our-gallery .cap span {
+      height: 1.7em;
+      width: 7em;
+      margin: 0 10px; }
+    .our-gallery .cap .left {
+      background: url("../img/left.png") no-repeat; }
+    .our-gallery .cap .right {
+      background: url("../img/right.png") no-repeat; }
+  .our-gallery .gallery_product img {
+    width: 100%;
+    border-radius: 10px; }
+  .our-gallery .gallery_product i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid white; }
+  .our-gallery .gallery_product:hover img {
+    filter: brightness(50%) blur(1px); }
+  .our-gallery .gallery_product:hover i {
+    display: block; }
+    .our-gallery .gallery_product:hover i:hover {
+      color: #f0c24b;
+      border-color: #f0c24b; }
+  .our-gallery .filter-button {
+    display: inline-block;
+    margin-top: 30px;
+    font: 1.6em "Open Sans", sans-serif;
+    padding: 15px 20px;
+    background-color: #ea7066;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+    font-size: 1.4em;
+    color: black;
+    background-color: #f8f8f8;
+    padding: 11px 20px;
+    margin: 0 5px 5%; }
+    .our-gallery .filter-button:hover {
+      text-decoration: none;
+      box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2); }
+    .our-gallery .filter-button:hover, .our-gallery .filter-button.active {
+      color: white;
+      background-color: #ea7066; }
+  .our-gallery .port-image {
+    width: 100%; }
+  .our-gallery .gallery_product {
+    margin-bottom: 30px; }
+  .our-gallery .button {
+    display: block; }
+    .our-gallery .button a {
+      display: inline-block;
+      margin-top: 30px;
+      font: 1.6em "Open Sans", sans-serif;
+      padding: 15px 20px;
+      background-color: #ea7066;
+      border-radius: 5px;
+      color: white;
+      text-transform: uppercase;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1); }
+      .our-gallery .button a:hover {
+        text-decoration: none;
+        box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2); }
+
+.popup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center; }
+
+.popup_bg {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+.popup_img {
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  max-height: 94%;
+  max-width: 94%;
+  margin: 1% 0 0 0; }
+
 /*# sourceMappingURL=style.css.map */
