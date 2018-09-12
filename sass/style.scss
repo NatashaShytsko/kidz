@@ -256,33 +256,58 @@ header{
     );
   }
 }
+
+@mixin cap {
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+
+  h1, .left, .right {
+    display: inline-block;
+  }
+  h1 {
+    font: 3.6em $font2;
+    color: $color3;
+    font-weight: bold;
+  }
+  span {
+    height: 1.7em;
+    width: 7em;
+    margin: 0 10px;
+  }
+  .left {
+    background: url('../img/left.png') no-repeat;
+  }
+  .right {
+    background: url('../img/right.png') no-repeat;
+  }
+}
+@mixin text {
+  font: 1.4em $font1;
+  color:  #666666;
+}
+@mixin button{
+         display: block;
+         a{
+           display: inline-block;
+           margin-top: 30px;
+           font: 1.6em $font1;
+           padding: 15px 20px;
+           background-color: $color3;
+           border-radius: 5px;
+           color: $color-white;
+           text-transform: uppercase;
+           box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+           &:hover{
+             text-decoration: none;
+             box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
+           }
+         }
+       }
 .features{
-
-    .cap {
-      display: block;
-      text-align: center;
-      margin-bottom: 50px;
-
-      h1, .left, .right {
-        display: inline-block;
-      }
-      h1 {
-        font: 3.6em $font2;
-        color: $color3;
-        font-weight: bold;
-      }
-      span {
-        height: 1.7em;
-        width: 7em;
-        margin: 0 10px;
-      }
-      .left {
-        background: url('../img/left.png') no-repeat;
-      }
-      .right {
-        background: url('../img/right.png') no-repeat;
-      }
-    }
+  .cap{
+    @include cap;
+  }
     .tabl {
 
         .block{
@@ -332,8 +357,7 @@ header{
 
             }
             .text{
-              font: 1.4em $font1;
-              color:  #666666;
+             @include text;
             }
             }
           }
@@ -364,23 +388,88 @@ header{
     color: $color-white;
   }
   .button{
-    display: block;
-    a{
-      display: inline-block;
-      margin-top: 30px;
-      font: 1.6em $font1;
-      padding: 15px 20px;
-      background-color: $color3;
-      border-radius: 5px;
-      color: $color-white;
-      text-transform: uppercase;
-      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
-      &:hover{
-        text-decoration: none;
-        box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2);
-      }
-    }
+    @include button;
   }
 }
+.courses{
+  padding: 5% 0;
+  .cap{
+    @include cap;
+  }
+  .cards{
 
+    .block{
+      .circle{
+        position: absolute;
+        color: $color-white;
+        font: 2.4em $font1;
+        top: 20px;
+        left: 35px;
+        padding: 13px 10px;
+        border-radius: 50%;
+      }
+
+      img{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        border-bottom: solid 5px;
+      }
+      .description{
+        background-color: #f8f8f8;
+        padding: 15px;
+      h3{
+        font:  2.2em $font2;
+        font-weight: bold;
+      }
+        .age, .time{
+          @include text;
+          display: block;
+          font-size: 1.3em;
+          font-weight: 600;
+        }
+        .text {
+          @include text;
+          display: block;
+          margin: 15px 0;
+        }
+        .button{
+          @include button;
+          display: inline-block;
+          a {
+            font-size: 1.4em;
+            color: $color-black;
+            background-color: $color-white;
+            padding: 11px 20px;
+            &:hover{
+              color: $color-white;
+            }
+          }
+        }
+        .more-courses{
+          a{
+          display: inline-block;
+          position: relative;
+          margin-left: 10px;
+          @include text;
+          font-size: 1.5em;
+        }
+        }
+      }
+    }
+    $colors: $color1, $color2, $color3, $color4;
+    $i:0;
+
+    @each $col in 1,2,3,4 {
+      $i: $i + 1;
+      .col-md-3:nth-child(#{($i)}) .block .circle, .col-md-3:nth-child(#{($i)}) .block .button a:hover{
+        background-color: nth($colors, $i);
+      }
+      .col-md-3:nth-child(#{($i)}) .block img{
+        border-color: nth($colors, $i);
+      }
+      .col-md-3:nth-child(#{($i)}) .block h3, .col-md-3:nth-child(#{($i)}) .block .more-courses a:hover{
+        color: nth($colors, $i);
+      }
+    }}
+}
 
