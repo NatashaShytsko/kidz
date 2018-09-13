@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?54362690');
-  src: url('../font/fontello.eot?54362690#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?54362690') format('woff2'),
-       url('../font/fontello.woff?54362690') format('woff'),
-       url('../font/fontello.ttf?54362690') format('truetype'),
-       url('../font/fontello.svg?54362690#fontello') format('svg');
+  src: url('../font/fontello.eot?80138375');
+  src: url('../font/fontello.eot?80138375#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?80138375') format('woff2'),
+       url('../font/fontello.woff?80138375') format('woff'),
+       url('../font/fontello.ttf?80138375') format('truetype'),
+       url('../font/fontello.svg?80138375#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?54362690#fontello') format('svg');
+    src: url('../font/fontello.svg?80138375#fontello') format('svg');
   }
 }
 */
@@ -90,6 +90,7 @@
 .icon-skype:before { content: '\f17e'; } /* '' */
 .icon-graduation-cap:before { content: '\f19d'; } /* '' */
 .icon-taxi:before { content: '\f1ba'; } /* '' */
+.icon-copyright:before { content: '\f1f9'; } /* '' */
 .icon-pinterest:before { content: '\f231'; } /* '' */
 .icon-gg:before { content: '\f260'; } /* '' */
 .icon-shopping-basket:before { content: '\f291'; } /* '' */
