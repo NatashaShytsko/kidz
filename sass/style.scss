@@ -615,33 +615,86 @@ i{
   .button{
     @include button;
   }
+  .popup {
+    position: absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    display:none;
+    text-align:center;
+  }
 
+  .popup_bg {
+    background:rgba(0,0,0,0.4);
+    position:absolute;
+    z-index:1;
+    height:100%;
+    width:100%;
+  }
+
+
+  .popup_img {
+    position: relative;
+    margin:0 auto;
+    z-index:2;
+    max-height:94%;
+    max-width:94%;
+    margin:1% 0 0 0;
+  }
 
 }
-.popup {
-  position: absolute;
-  height:100%;
-  width:100%;
-  top:0;
-  left:0;
-  display:none;
-  text-align:center;
-}
 
-.popup_bg {
-  background:rgba(0,0,0,0.4);
-  position:absolute;
-  z-index:1;
-  height:100%;
-  width:100%;
-}
+.facts {
+  @extend .more;
+  .row {
+    margin-top: 5%;
+    .num {
+      font: 5.6em $font2;
+      color: $color-white;
+      border: 4px solid white;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      position: relative;
+      width: 57%;
+      overflow: hidden;
+      &:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      .square-content{
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        color: white;
+      }
+      .square-content div {
+        display: table;
+        width: 100%;
+        height: 100%;
+      }
+      .square-content span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        color: white
+      }
+    }
 
+    $colors: $color1, $color2, $color3, $color4;
+    $i:0;
 
-.popup_img {
-  position: relative;
-  margin:0 auto;
-  z-index:2;
-  max-height:94%;
-  max-width:94%;
-  margin:1% 0 0 0;
+    @each $col in 1,2,3,4 {
+      $i: $i + 1;
+      .col-md-3:nth-child(#{($i)}) .button a{
+        background-color: nth($colors, $i);
+      }
+
+    }
+
+  }
 }
