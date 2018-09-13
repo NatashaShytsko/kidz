@@ -751,3 +751,82 @@ i{
     @include button;
   }
 }
+.address{
+  padding: 5% 0;
+  background-color: #f5f5f5;
+
+  .cap{
+    @include cap;
+    text-align: left;
+    margin: 0 0 20px;
+  }
+  .text{
+    @include text;
+    display: block;
+    width: 100%;
+  }
+  .block{
+    display: block;
+    margin-top: 10px;
+  i{
+    display: inline-block;
+    font-size: 1.6em;
+    color: $color-white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right:10px;
+    vertical-align: middle;
+  }
+    @include config-icon-colors('icon-', 'background-color',
+            'location'   $color1,
+            'mail' $color2,
+            'phone' $color4
+    );
+  .address-text{
+    @include text;
+    opacity: 0.8;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+  }
+  }
+  form {
+    input[type=text], input[type=email], textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 13px;
+      background: #f5f5f5;
+      border: solid 3px;
+      border-radius: 10px;
+      color: $color-black;
+    }
+    input, textarea {
+      &[placeholder] {
+        @include text;
+      }
+      &:hover, &:visited, &:active{
+        outline: none;
+      }
+    }
+    input[type=text] {
+      border-color: $color1;
+    }
+    input[type=email] {
+      border-color: $color2;
+    }
+    textarea {
+      border-color: $color4;
+
+
+
+    }
+    input[type=submit]{
+      @include buttona;
+      margin: 0;
+      float: right;
+      border: none;
+    }
+
+  }
+}
