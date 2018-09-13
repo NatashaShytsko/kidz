@@ -638,4 +638,158 @@ header .row {
   .facts .row .col-md-3:nth-child(4) .button a {
     background-color: #84bed6; }
 
+.news {
+  padding: 5% 0;
+  text-align: center;
+  position: relative; }
+  .news .cap {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px; }
+    .news .cap h1, .news .cap .left, .news .cap .right {
+      display: inline-block; }
+    .news .cap h1 {
+      font: 3.6em "Dosis", sans-serif;
+      color: #ea7066;
+      font-weight: bold; }
+    .news .cap span {
+      height: 1.7em;
+      width: 7em;
+      margin: 0 10px; }
+    .news .cap .left {
+      background: url("../img/left.png") no-repeat; }
+    .news .cap .right {
+      background: url("../img/right.png") no-repeat; }
+  .news .cards {
+    text-align: left; }
+    .news .cards .block .circle {
+      position: absolute;
+      color: white;
+      font: 2.4em "Open Sans", sans-serif;
+      top: 20px;
+      left: 35px;
+      padding: 13px 10px;
+      border-radius: 50%; }
+    .news .cards .block img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      border-bottom: solid 5px; }
+    .news .cards .block .description {
+      background-color: #f8f8f8;
+      padding: 15px; }
+      .news .cards .block .description h3 {
+        font: 2.2em "Dosis", sans-serif;
+        font-weight: bold; }
+      .news .cards .block .description .age, .news .cards .block .description .time {
+        font: 1.4em "Open Sans", sans-serif;
+        color: #666666;
+        display: block;
+        font-size: 1.3em;
+        font-weight: 600; }
+      .news .cards .block .description .text {
+        font: 1.4em "Open Sans", sans-serif;
+        color: #666666;
+        display: block;
+        margin: 15px 0; }
+      .news .cards .block .description .button {
+        display: block;
+        display: inline-block; }
+        .news .cards .block .description .button a {
+          display: inline-block;
+          margin-top: 30px;
+          font: 1.6em "Open Sans", sans-serif;
+          padding: 15px 20px;
+          background-color: #ea7066;
+          border-radius: 5px;
+          color: white;
+          text-transform: uppercase;
+          box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1); }
+          .news .cards .block .description .button a:hover {
+            text-decoration: none;
+            box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2); }
+        .news .cards .block .description .button a {
+          font-size: 1.4em;
+          color: black;
+          background-color: white;
+          padding: 11px 20px; }
+          .news .cards .block .description .button a:hover {
+            color: white; }
+      .news .cards .block .description .more-courses a {
+        display: inline-block;
+        position: relative;
+        margin-left: 10px;
+        font: 1.4em "Open Sans", sans-serif;
+        color: #666666;
+        font-size: 1.5em; }
+    .news .cards .col-md-3:nth-child(1) .block .circle, .news .cards .col-md-3:nth-child(1) .block .button a:hover {
+      background-color: #f0c24b; }
+    .news .cards .col-md-3:nth-child(1) .block img {
+      border-color: #f0c24b; }
+    .news .cards .col-md-3:nth-child(1) .block h3, .news .cards .col-md-3:nth-child(1) .block .more-courses a:hover {
+      color: #f0c24b; }
+    .news .cards .col-md-3:nth-child(2) .block .circle, .news .cards .col-md-3:nth-child(2) .block .button a:hover {
+      background-color: #b5d56a; }
+    .news .cards .col-md-3:nth-child(2) .block img {
+      border-color: #b5d56a; }
+    .news .cards .col-md-3:nth-child(2) .block h3, .news .cards .col-md-3:nth-child(2) .block .more-courses a:hover {
+      color: #b5d56a; }
+    .news .cards .col-md-3:nth-child(3) .block .circle, .news .cards .col-md-3:nth-child(3) .block .button a:hover {
+      background-color: #ea7066; }
+    .news .cards .col-md-3:nth-child(3) .block img {
+      border-color: #ea7066; }
+    .news .cards .col-md-3:nth-child(3) .block h3, .news .cards .col-md-3:nth-child(3) .block .more-courses a:hover {
+      color: #ea7066; }
+    .news .cards .col-md-3:nth-child(4) .block .circle, .news .cards .col-md-3:nth-child(4) .block .button a:hover {
+      background-color: #84bed6; }
+    .news .cards .col-md-3:nth-child(4) .block img {
+      border-color: #84bed6; }
+    .news .cards .col-md-3:nth-child(4) .block h3, .news .cards .col-md-3:nth-child(4) .block .more-courses a:hover {
+      color: #84bed6; }
+    .news .cards .block .circle {
+      font-size: 1.8em;
+      padding: 10px 15px;
+      background: #ea7066;
+      border-radius: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1em;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); }
+    .news .cards .block .description .age, .news .cards .block .description .time {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal; }
+    .news .cards .col-md-4:nth-child(1) .block .circle {
+      background-color: #f0c24b; }
+    .news .cards .col-md-4:nth-child(1) .block img {
+      border-color: #f0c24b; }
+    .news .cards .col-md-4:nth-child(1) .block h3, .news .cards .col-md-4:nth-child(1) .block .more-courses a:hover {
+      color: #f0c24b; }
+    .news .cards .col-md-4:nth-child(2) .block .circle {
+      background-color: #b5d56a; }
+    .news .cards .col-md-4:nth-child(2) .block img {
+      border-color: #b5d56a; }
+    .news .cards .col-md-4:nth-child(2) .block h3, .news .cards .col-md-4:nth-child(2) .block .more-courses a:hover {
+      color: #b5d56a; }
+    .news .cards .col-md-4:nth-child(3) .block .circle {
+      background-color: #84bed6; }
+    .news .cards .col-md-4:nth-child(3) .block img {
+      border-color: #84bed6; }
+    .news .cards .col-md-4:nth-child(3) .block h3, .news .cards .col-md-4:nth-child(3) .block .more-courses a:hover {
+      color: #84bed6; }
+  .news .button {
+    display: block; }
+    .news .button a {
+      display: inline-block;
+      margin-top: 30px;
+      font: 1.6em "Open Sans", sans-serif;
+      padding: 15px 20px;
+      background-color: #ea7066;
+      border-radius: 5px;
+      color: white;
+      text-transform: uppercase;
+      box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1); }
+      .news .button a:hover {
+        text-decoration: none;
+        box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.2); }
+
 /*# sourceMappingURL=style.css.map */

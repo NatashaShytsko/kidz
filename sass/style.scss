@@ -311,6 +311,81 @@ header{
            @include buttona;
          }
        }
+@mixin cards{
+
+  .block{
+    .circle{
+      position: absolute;
+      color: $color-white;
+      font: 2.4em $font1;
+      top: 20px;
+      left: 35px;
+      padding: 13px 10px;
+      border-radius: 50%;
+    }
+
+    img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      border-bottom: solid 5px;
+    }
+    .description{
+      background-color: #f8f8f8;
+      padding: 15px;
+      h3{
+        font:  2.2em $font2;
+        font-weight: bold;
+      }
+      .age, .time{
+        @include text;
+        display: block;
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      .text {
+        @include text;
+        display: block;
+        margin: 15px 0;
+      }
+      .button{
+        @include button;
+        display: inline-block;
+        a {
+          font-size: 1.4em;
+          color: $color-black;
+          background-color: $color-white;
+          padding: 11px 20px;
+          &:hover{
+            color: $color-white;
+          }
+        }
+      }
+      .more-courses{
+        a{
+          display: inline-block;
+          position: relative;
+          margin-left: 10px;
+          @include text;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  $colors: $color1, $color2, $color3, $color4;
+  $i:0;
+
+  @each $col in 1,2,3,4 {
+    $i: $i + 1;
+    .col-md-3:nth-child(#{($i)}) .block .circle, .col-md-3:nth-child(#{($i)}) .block .button a:hover{
+      background-color: nth($colors, $i);
+    }
+    .col-md-3:nth-child(#{($i)}) .block img{
+      border-color: nth($colors, $i);
+    }
+    .col-md-3:nth-child(#{($i)}) .block h3, .col-md-3:nth-child(#{($i)}) .block .more-courses a:hover{
+      color: nth($colors, $i);
+    }
+  }}
 .features{
   .cap{
     @include cap;
@@ -403,81 +478,10 @@ header{
   .cap{
     @include cap;
   }
-  .cards{
 
-    .block{
-      .circle{
-        position: absolute;
-        color: $color-white;
-        font: 2.4em $font1;
-        top: 20px;
-        left: 35px;
-        padding: 13px 10px;
-        border-radius: 50%;
-      }
-
-      img{
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        border-bottom: solid 5px;
-      }
-      .description{
-        background-color: #f8f8f8;
-        padding: 15px;
-      h3{
-        font:  2.2em $font2;
-        font-weight: bold;
-      }
-        .age, .time{
-          @include text;
-          display: block;
-          font-size: 1.3em;
-          font-weight: 600;
-        }
-        .text {
-          @include text;
-          display: block;
-          margin: 15px 0;
-        }
-        .button{
-          @include button;
-          display: inline-block;
-          a {
-            font-size: 1.4em;
-            color: $color-black;
-            background-color: $color-white;
-            padding: 11px 20px;
-            &:hover{
-              color: $color-white;
-            }
-          }
-        }
-        .more-courses{
-          a{
-          display: inline-block;
-          position: relative;
-          margin-left: 10px;
-          @include text;
-          font-size: 1.5em;
-        }
-        }
-      }
-    }
-    $colors: $color1, $color2, $color3, $color4;
-    $i:0;
-
-    @each $col in 1,2,3,4 {
-      $i: $i + 1;
-      .col-md-3:nth-child(#{($i)}) .block .circle, .col-md-3:nth-child(#{($i)}) .block .button a:hover{
-        background-color: nth($colors, $i);
-      }
-      .col-md-3:nth-child(#{($i)}) .block img{
-        border-color: nth($colors, $i);
-      }
-      .col-md-3:nth-child(#{($i)}) .block h3, .col-md-3:nth-child(#{($i)}) .block .more-courses a:hover{
-        color: nth($colors, $i);
-      }
-    }}
+  .cards {
+    @include cards;
+  }
 }
 .meet{
   padding: 5% 0;
@@ -696,5 +700,54 @@ i{
 
     }
 
+  }
+}
+.news{
+  padding: 5% 0;
+  text-align: center;
+  position: relative;
+  .cap{
+    @include cap;
+  }
+  .cards{
+    @include cards;
+    text-align: left;
+    .block {
+      .circle {
+        font-size: 1.8em;
+        padding: 10px 15px;
+        background: #ea7066;
+        border-radius: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1em;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+      }
+      .description{
+        .age, .time{
+          display: inline-block;
+          margin-right: 10px;
+          font-weight: normal;
+        }
+      }
+    }
+    $colors: $color1, $color2, $color4;
+    $i:0;
+
+    @each $col in 1,2,3 {
+      $i: $i + 1;
+      .col-md-4:nth-child(#{($i)}) .block .circle{
+        background-color: nth($colors, $i);
+      }
+      .col-md-4:nth-child(#{($i)}) .block img{
+        border-color: nth($colors, $i);
+      }
+      .col-md-4:nth-child(#{($i)}) .block h3, .col-md-4:nth-child(#{($i)}) .block .more-courses a:hover{
+        color: nth($colors, $i);
+      }
+    }
+  }
+  .button{
+    @include button;
   }
 }
