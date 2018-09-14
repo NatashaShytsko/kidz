@@ -1,0 +1,7 @@
+@mixin config-colors($prefix, $prop, $colors...) {
+  @each $i in $colors {
+    #{$prefix}#{nth($i, 1)} {
+      #{$prop}: nth($i, 2);
+    }
+  }
+}

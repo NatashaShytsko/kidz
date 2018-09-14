@@ -41,6 +41,7 @@ section {
         .top .row .top-section div i, .top .row .top-section div span {
           display: inline-block; }
         .top .row .top-section div .circle {
+          color: white;
           padding: 5px;
           border-radius: 50%;
           margin-right: 10px; }
@@ -193,7 +194,7 @@ header .row {
         font-size: 1.2em; } }
     .main-slider .arrow:hover, .main-slider .arrow:focus, .main-slider .arrow:active {
       outline: none;
-      color: #2f3c43; }
+      color: #445761; }
   .main-slider .prev {
     left: 2%; }
   .main-slider .next {
@@ -248,6 +249,7 @@ header .row {
         background-color: white;
         border: solid 6px;
         top: -50px;
+        color: black;
         padding: 28px;
         border-radius: 50%; }
         .blocks .col-md-3 .block i:hover {
@@ -336,10 +338,10 @@ header .row {
     .features .tabl .block .icon {
       margin: 15px 0; }
       .features .tabl .block .icon i {
-        color: white;
         font-size: 2.2em;
         border: 2px solid white;
         margin-right: 10px;
+        color: white;
         padding: 15px;
         border-radius: 50%; }
         .features .tabl .block .icon i:hover {
@@ -578,7 +580,7 @@ header .row {
         font-size: 1.2em; } }
     .meet .arrow:hover, .meet .arrow:focus, .meet .arrow:active {
       outline: none;
-      color: #2f3c43; }
+      color: #445761; }
   .meet .prev {
     left: -2%; }
   .meet .next {
@@ -956,9 +958,9 @@ header .row {
     .address .block i {
       display: inline-block;
       font-size: 1.6em;
-      color: white;
       margin-right: 10px;
       vertical-align: middle;
+      color: white;
       padding: 10px;
       border-radius: 50%; }
       .address .block i:hover {
@@ -1059,7 +1061,7 @@ footer {
   footer .post .block:nth-child(4) .square {
     border-color: #84bed6; }
   footer .post .block {
-    border-bottom: 1px solid #c4dbf333; }
+    border-bottom: 1px solid rgba(196, 219, 243, 0.2); }
     footer .post .block .description {
       font: 1.4em "Open Sans", sans-serif;
       color: #c4dbf3;
@@ -1120,6 +1122,7 @@ footer {
       display: inline-block;
       margin: 5px 10px 5px 0;
       vertical-align: middle;
+      color: white;
       padding: 10px;
       border-radius: 50%; }
       .bottom .container .social i:hover {

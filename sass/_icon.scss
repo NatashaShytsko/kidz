@@ -1,0 +1,9 @@
+@mixin icon($color: $color-icon, $padding: 5px, $prop: 'background-color' , $colors...){
+  color: $color;
+  padding: $padding;
+  border-radius: 50%;
+  &:hover {
+    text-shadow: 1px 1px 1px $color-text3;
+  }
+  @include config-colors('&.icon-', $prop, $colors...);
+}

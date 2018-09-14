@@ -1,0 +1,20 @@
+@mixin arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6em;
+  width: 3.2em;
+  height: 3.2em;
+  border: none;
+  z-index: 99;
+  background-color: $color-text2;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
+  &:hover, &:focus, &:active {
+    outline: none;
+    color: lighten($color7, 10%);
+  }
+}

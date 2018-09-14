@@ -1,0 +1,24 @@
+@mixin button-a($size: 1.6em, $padding: 15px 20px, $color: $color-text2, $back-color: $color3, $h-color: $color-text2, $h-back-color: $color3, $margin: 30px 0 0 0) {
+  display: inline-block;
+  margin: $margin;
+  font: $size $font1;
+  padding: $padding;
+  background-color: $back-color;
+  border-radius: 5px;
+  color: $color;
+  text-transform: uppercase;
+  box-shadow: $box-shadow-button;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    box-shadow: 4px 4px 0 1px rgba(0, 0, 0, 0.2);
+    background-color: $h-back-color;
+    color: $h-color;
+  }
+}
+
+@mixin button($size: 1.6em, $padding: 15px 20px, $color: $color-text2, $back-color: $color3, $h-color: $color-text2, $h-back-color: $color3 ){
+  display: block;
+  a {
+    @include button-a($size: 1.6em, $padding: 15px 20px, $color: $color-text2, $back-color: $color3, $h-color: $color-text2, $h-back-color: $color3)
+  }
+}
