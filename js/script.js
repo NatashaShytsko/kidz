@@ -71,10 +71,5 @@ $(document).ready(function () {
         $('nav').toggle();
         e.stopPropagation();
     });
-    $('body').click(function () {
-        var link = $('span.navbar-toggle');
-        if (link.hasClass('active')) {
-            link.click();
-        }
-    });
+
 });
