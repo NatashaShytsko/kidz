@@ -5,6 +5,7 @@ $color4: #84bed6;
 $color5: #a597e7;
 $color6: #ea77ad;
 $color7: #2f3c43;
+$color8: #666666;
 $color-white: white;
 $color-black: black;
 
@@ -12,20 +13,28 @@ $font1: 'Open Sans', sans-serif;
 $font2: 'Dosis', sans-serif;
 $font-size: 10px;
 @import "fonts.scss";
+
 @mixin config-icon-colors($prefix, $prop, $colors...) {
   @each $i in $colors {
-    .#{$prefix}#{nth($i, 1)} {
-
+    #{$prefix}#{nth($i, 1)} {
       #{$prop}: nth($i, 2);
     }
   }
 }
 
-@mixin cap {
-  display: block;
-  text-align: center;
-  margin-bottom: 50px;
+@mixin icon($padding: 5px, $prop: 'background-color' , $colors...){
+  padding: $padding;
+  border-radius: 50%;
+  &:hover {
+    text-shadow: 1px 1px 1px $color-black;
+  }
+  @include config-icon-colors('&.icon-', $prop, $colors...);
+}
 
+@mixin cap($align: center, $margin: 0 0 50px 0) {
+  display: block;
+  text-align: $align;
+  margin: $margin;
   h1, .left, .right {
     display: inline-block;
   }
@@ -41,54 +50,52 @@ $font-size: 10px;
     height: 1.7em;
     width: 7em;
     margin: 0 10px;
-
     @media (max-width: 768px) {
       width: 4em;
     }
   }
-  .left {
-    background: url('../img/left.png') no-repeat;
-    background-size: 100%;
-  }
-  .right {
-    background: url('../img/right.png') no-repeat;
-    background-size: 100%;
+  @each $name in 'left' 'right' {
+    .#{$name} {
+      background: url('../img/#{$name}.png') no-repeat;
+      background-size: 100%;
+    }
   }
 }
 
-@mixin text {
-  font: 1.4em $font1;
-  color: #666666;
+@mixin text($size: 1.4em, $color: $color8, $font-w: normal ) {
+  font: $size $font1;
+  color: $color;
+  font-weight: $font-w;
 }
 
-@mixin buttona {
+@mixin button-a($size: 1.6em, $padding: 15px 20px, $color: $color-white, $back-color: $color3, $h-color: $color-white, $h-back-color: $color3, $margin: 30px 0 0 0) {
   display: inline-block;
-  margin-top: 30px;
-  font: 1.6em $font1;
-  padding: 15px 20px;
-  background-color: $color3;
+  margin: $margin;
+  font: $size $font1;
+  padding: $padding;
+  background-color: $back-color;
   border-radius: 5px;
-  color: $color-white;
+  color: $color;
   text-transform: uppercase;
   box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
   &:hover, &:focus, &:active {
     text-decoration: none;
     box-shadow: 4px 4px 0 1px rgba(0, 0, 0, 0.2);
+    background-color: $h-back-color;
+    color: $h-color;
   }
-
 }
 
-@mixin button {
+@mixin button($size: 1.6em, $padding: 15px 20px, $color: $color-white, $back-color: $color3, $h-color: $color-white, $h-back-color: $color3 ){
   display: block;
   a {
-    @include buttona;
+    @include button-a($size: 1.6em, $padding: 15px 20px, $color: $color-white, $back-color: $color3, $h-color: $color-white, $h-back-color: $color3)
   }
 }
 
-@mixin cards {
-
+@mixin cards($colors...) {
   .block {
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     .circle {
       position: absolute;
@@ -99,7 +106,6 @@ $font-size: 10px;
       padding: 13px 10px;
       border-radius: 50%;
     }
-
     img {
       width: 100%;
       border-radius: 10px 10px 0 0;
@@ -113,10 +119,8 @@ $font-size: 10px;
         font-weight: bold;
       }
       .age, .time {
-        @include text;
+        @include text($size: 1.3em, $font-w: 600);
         display: block;
-        font-size: 1.3em;
-        font-weight: 600;
       }
       .text {
         @include text;
@@ -124,17 +128,9 @@ $font-size: 10px;
         margin: 15px 0;
       }
       .button {
-
         display: inline-block;
         a {
-          @include buttona;
-          font-size: 1.4em;
-          color: $color-black;
-          background-color: $color-white;
-          padding: 11px 20px;
-          &:hover {
-            color: $color-white;
-          }
+          @include button-a($size: 1.4em, $padding: 11px 20px, $color: $color-black, $back-color: $color-white, $h-color: $color-white);
         }
       }
       .more-courses {
@@ -142,15 +138,12 @@ $font-size: 10px;
           display: inline-block;
           position: relative;
           margin-left: 10px;
-          @include text;
-          font-size: 1.5em;
+          @include text($size: 1.5em);
         }
       }
     }
   }
-  $colors: $color1, $color2, $color3, $color4;
   $i: 0;
-
   @each $col in 1, 2, 3, 4 {
     $i: $i + 1;
     .cour:nth-child(#{($i)}) .block .circle, .cour:nth-child(#{($i)}) .block .button a:hover {
@@ -165,14 +158,37 @@ $font-size: 10px;
   }
 }
 
+@mixin arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6em;
+  width: 3.2em;
+  height: 3.2em;
+  border: none;
+  z-index: 99;
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
+  &:hover, &:focus, &:active {
+    outline: none;
+    color: $color7;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-size: $font-size;
 }
-
+section{
+  padding: 5% 0;
+}
 .strip {
+  padding: 0;
   height: 2px;
   background: linear-gradient(90deg, $color1 0%, $color1 8.333%, $color2 8.333%, $color2 16.666%, $color3 16.666%, $color3 25%, $color4 25%, $color4 33.333%, $color5 33.333%, $color5 41.666%, $color6 41.666%, $color6 50%, $color1 50%, $color1 58.333%, $color2 58.333%, $color2 66.666%, $color3 66.666%, $color3 75%, $color4 75%, $color4 83.333%, $color5 83.333%, $color5 91.666%, $color6 91.666%, $color6 100%);
 }
@@ -203,31 +219,22 @@ body {
           display: inline-block;
         }
         .circle {
-          padding: 5px;
-          border-radius: 15px;
+          @include icon(5px, 'background-color', 'mail-alt' $color1,
+                  'phone' $color2,
+                  'clock' $color6,
+                  'globe' $color4,
+                  'lock-open-alt' $color5,
+          'shopping-basket' $color3);
           margin-right: 10px;
-          &:hover {
-            text-shadow: 1px 1px 1px $color-black;
-
-          }
         }
-        @include config-icon-colors('icon-', 'background-color',
-                'mail-alt' $color1,
-                'phone' $color2,
-                'clock' $color6,
-                'globe' $color4,
-                'lock-open-alt' $color5,
-                'shopping-basket' $color3
-        );
         .icon-shopping-basket {
           padding: 10px;
           border-radius: 10px;
+          background-color: $color3;
           &:hover {
             text-shadow: 1px 1px 1px $color-black;
-
           }
         }
-
       }
     }
   }
@@ -243,10 +250,8 @@ header {
     .navbar-toggle {
       display: none;
       @media (max-width: 768px) {
-        display: inline-block;
         position: relative;
-        margin: auto 0;
-        @include buttona;
+        @include button-a($margin: auto 0);
       }
     }
     div, nav {
@@ -275,7 +280,7 @@ header {
           }
           .active, :hover {
             text-decoration: none;
-            @include config-icon-colors('icon-', 'color',
+            @include config-icon-colors('.icon-', 'color',
                     'home + span' $color1,
                     'doc-text + span' $color2,
                     'list-bullet + span' $color3,
@@ -284,7 +289,6 @@ header {
                     'gg + span' $color6
             );
           }
-
           a {
             .textmenu {
               color: $color-black;
@@ -302,9 +306,8 @@ header {
                 display: inline-block;
                 border: none;
               }
-
             }
-            @include config-icon-colors('icon-', 'border-color',
+            @include config-icon-colors('.icon-', 'border-color',
                     'home + span' $color1,
                     'doc-text + span' $color2,
                     'list-bullet + span' $color3,
@@ -315,25 +318,18 @@ header {
               font-size: 1.5em;
               display: inline-block;
               color: $color-white;
-              padding: 10px;
-              border-radius: 25px;
+              @include icon(10px, 'background-color',
+                      'home' $color1,
+                      'doc-text' $color2,
+                      'list-bullet' $color3,
+                      'edit' $color4,
+                      'calendar' $color5,
+                      'gg' $color6
+              );
               @media (max-width: 992px) {
                 font-size: 1.3em;
               }
-              &:hover {
-                text-shadow: 1px 1px 1px $color-black;
-
-              }
-
             }
-            @include config-icon-colors('icon-', 'background-color',
-                    'home' $color1,
-                    'doc-text' $color2,
-                    'list-bullet' $color3,
-                    'edit' $color4,
-                    'calendar' $color5,
-                    'gg' $color6
-            );
           }
           &:last-child .textmenu {
             border-right: none;
@@ -344,28 +340,8 @@ header {
   }
 }
 
-@mixin arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.6em;
-  width: 3.2em;
-  height: 3.2em;
-  border: none;
-  z-index: 99;
-  background-color: $color-white;
-  border-radius: 10px;
-  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
-  @media (max-width: 768px) {
-    font-size: 1.2em;
-  }
-  &:hover, &:focus, &:active {
-    outline: none;
-    color: $color7*2;
-  }
-}
-
 .main-slider {
+  padding: 0;
   .arrow {
     @include arrow;
   }
@@ -387,7 +363,6 @@ header {
       margin-top: -4%;
       margin-left: 2%;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
       h1 {
         font-size: 5.2em;
         font-weight: bold;
@@ -404,17 +379,16 @@ header {
       }
     }
   }
-
 }
 
 .blocks {
+  padding: 0;
   .col-md-3 {
     padding-left: 0;
     padding-right: 0;
     @media (max-width: 768px) {
       margin-top: 55px;
     }
-
     .block {
       position: relative;
       top: -100px;
@@ -432,21 +406,19 @@ header {
         position: relative;
         display: inline-block;
         font-size: 3em;
-        padding: 28px;
         background-color: $color-white;
-        border-radius: 50%;
         border: solid 6px;
         top: -50px;
+        @include icon(28px, 'border-color',
+                'doc-text' $color1,
+                'calendar-empty' $color2,
+                'picture' $color3,
+                'docs' $color4
+        );
         @media (max-width: 992px) {
           font-size: 2em;
         }
       }
-      @include config-icon-colors('icon-', 'border-color',
-              'doc-text' $color1,
-              'calendar-empty' $color2,
-              'picture' $color3,
-              'docs' $color4
-      );
       span {
         display: block;
         font: 3.2em $font2;
@@ -470,19 +442,16 @@ header {
       &:hover {
         .icon-down-open {
           visibility: inherit;
-
         }
-        @include config-icon-colors('icon-', 'color',
+        @include config-icon-colors('.icon-', 'color',
                 'doc-text' $color1,
                 'calendar-empty' $color2,
                 'picture' $color3,
                 'docs' $color4
         );
       }
-
     }
-
-    @include config-icon-colors('block-', 'background-color',
+    @include config-icon-colors('.block-', 'background-color',
             '1' $color1,
             '2' $color2,
             '3' $color3,
@@ -492,12 +461,11 @@ header {
 }
 
 .features {
-  padding: 5% 0;
+  padding: 0 0 5% 0;
   .cap {
     @include cap;
   }
   .tabl {
-
     .block {
       margin-bottom: 20px;
       .descr, .icon {
@@ -506,15 +474,19 @@ header {
       }
       .icon {
         margin: 15px 0;
-
         i {
           color: $color-white;
           font-size: 2.2em;
-          border-radius: 50%;
           border: 2px solid $color-white;
-          padding: 15px;
           margin-right: 10px;
-
+          @include icon(15px, 'background-color',
+                  'graduation-cap' $color1,
+                  'envira' $color2,
+                  'taxi' $color3,
+                  'food' $color4,
+                  'heart' $color5,
+                  'shield' $color6
+          );
         }
         $colors: $color1, $color2, $color3, $color4, $color5, $color6;
         $i: 0;
@@ -527,22 +499,12 @@ header {
             }
           }
         }
-
-        @include config-icon-colors('icon-', 'background-color',
-                'graduation-cap' $color1,
-                'envira' $color2,
-                'taxi' $color3,
-                'food' $color4,
-                'heart' $color5,
-                'shield' $color6
-        );
       }
       .descr {
         width: 70%;
         h3 {
           font: 2.4em $font2;
           font-weight: bold;
-
         }
         .text {
           @include text;
@@ -564,7 +526,6 @@ header {
 .more {
   background-color: #a5a5a5;
   text-align: center;
-  padding: 5% 0;
   h1 {
     font: 3.6em $font2;
     color: $color-white;
@@ -576,7 +537,7 @@ header {
     color: $color-white;
   }
   .button {
-    @include button;
+    @include button();
   }
 }
 
@@ -585,14 +546,12 @@ header {
   .cap {
     @include cap;
   }
-
   .cards {
-    @include cards;
+    @include cards($color1, $color2, $color3, $color4);
   }
 }
 
 .meet {
-  padding: 5% 0;
   background: url('../img/backmeet.png');
   .cap {
     @include cap;
@@ -672,13 +631,11 @@ header {
 }
 
 .our-gallery {
-  padding: 5% 0;
   text-align: center;
   position: relative;
   .cap {
     @include cap;
   }
-
   .gallery_product {
     img {
       width: 100%;
@@ -697,7 +654,6 @@ header {
       border: 2px solid $color-white;
     }
     &:hover {
-
       img {
         filter: brightness(50%) blur(1px);
       }
@@ -711,17 +667,7 @@ header {
     }
   }
   .filter-button {
-    @include buttona;
-    font-size: 1.4em;
-    color: $color-black;
-    background-color: #f8f8f8;
-    padding: 11px 20px;
-    margin: 0 5px 5%;
-    &:hover, &.active {
-      color: $color-white;
-      background-color: $color3;
-    }
-
+    @include button-a($size: 1.4em, $padding: 11px 20px, $color: $color-black, $back-color: #f8f8f8, $margin: 0 5px 5% );
   }
 
   .port-image {
@@ -823,14 +769,13 @@ header {
 }
 
 .news {
-  padding: 5% 0;
   text-align: center;
   position: relative;
   .cap {
     @include cap;
   }
   .cards {
-    @include cards;
+    @include cards($color1, $color2, $color4, $color3);
     text-align: left;
     .block {
       .circle {
@@ -851,35 +796,16 @@ header {
         }
       }
     }
-    $colors: $color1, $color2, $color4;
-    $i: 0;
-
-    @each $col in 1, 2, 3 {
-      $i: $i + 1;
-      .col-md-4:nth-child(#{($i)}) .block .circle {
-        background-color: nth($colors, $i);
-      }
-      .col-md-4:nth-child(#{($i)}) .block img {
-        border-color: nth($colors, $i);
-      }
-      .col-md-4:nth-child(#{($i)}) .block h3, .col-md-4:nth-child(#{($i)}) .block .more-courses a:hover {
-        color: nth($colors, $i);
-      }
-    }
   }
   .button {
-    @include button;
+    @include button();
   }
 }
 
 .address {
-  padding: 5% 0;
   background-color: #f5f5f5;
-
   .cap {
-    @include cap;
-    text-align: left;
-    margin: 0 0 20px;
+    @include cap($align: left, $margin:0 0 20px );
   }
   .text {
     @include text;
@@ -893,20 +819,14 @@ header {
       display: inline-block;
       font-size: 1.6em;
       color: $color-white;
-      padding: 10px;
-      border-radius: 50%;
       margin-right: 10px;
       vertical-align: middle;
-      &:hover {
-        text-shadow: 1px 1px 1px $color-black;
-
-      }
+      @include icon(10px, 'background-color',
+              'location' $color1,
+              'mail' $color2,
+              'phone' $color4
+      );
     }
-    @include config-icon-colors('icon-', 'background-color',
-            'location' $color1,
-            'mail' $color2,
-            'phone' $color4
-    );
     .address-text {
       @include text;
       opacity: 0.8;
@@ -942,15 +862,12 @@ header {
     }
     textarea {
       border-color: $color4;
-
     }
     input[type=submit] {
-      @include buttona;
-      margin: 0;
+      @include button-a($margin: 0);
       float: right;
       border: none;
     }
-
   }
 }
 
@@ -967,16 +884,14 @@ footer {
     span {
       display: block;
       margin: 30px 0;
-      @include text;
-      color: #c4dbf3;
+      @include text($color: #c4dbf3);
     }
   }
   .links {
     ul {
       padding: 0;
       li {
-        @include text;
-        color: #c4dbf3;
+        @include text($color: #c4dbf3);
         list-style: none;
         margin: 20px 0;
         a {
@@ -1013,8 +928,7 @@ footer {
     .block {
       border-bottom: 1px solid #c4dbf333;
       .description {
-        @include text;
-        color: #c4dbf3;
+        @include text($color: #c4dbf3);
         display: inline-block;
         width: 75%;
         vertical-align: middle;
@@ -1034,13 +948,10 @@ footer {
   }
   .mail {
     .text {
-      @include text;
-      color: #c4dbf3;
-
+      @include text($color: #c4dbf3);
     }
     form {
       margin-top: 40px;
-
       input {
         padding: 10px 20px;
         width: 80%;
@@ -1053,9 +964,8 @@ footer {
         }
       }
       button {
-        @include text;
+        @include text($color: $color-white);
         padding: 10px;
-        color: $color-white;
         background: $color3;
         border: none;
         margin-left: -3px;
@@ -1086,25 +996,18 @@ footer {
       margin: auto 0;
     }
     .social {
-
       i {
         display: inline-block;
-        padding: 10px;
-        border-radius: 50%;
         margin: 5px 10px 5px 0;
         vertical-align: middle;
-        &:hover {
-          text-shadow: 1px 1px 1px $color-black;
-
-        }
+        @include icon(10px, 'background-color',
+                'twitter' $color1,
+                'linkedin' $color2,
+                'facebook' $color3,
+                'skype' $color5,
+                'pinterest' $color6
+        );
       }
-      @include config-icon-colors('icon-', 'background-color',
-              'twitter' $color1,
-              'linkedin' $color2,
-              'facebook' $color3,
-              'skype' $color5,
-              'pinterest' $color6
-      );
     }
   }
 }
