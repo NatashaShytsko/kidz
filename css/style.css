@@ -199,9 +199,8 @@ header .row {
     left: 2%; }
   .main-slider .next {
     right: 2%; }
-  .main-slider .slick-slide img {
-    width: 100%;  }
-
+  .main-slider img {
+    width: 100%; }
   .main-slider .slick-slide .description {
     font-family: "Dosis", sans-serif;
     color: white;
