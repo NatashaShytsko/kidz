@@ -161,9 +161,9 @@ header {
     }
   }
 }
-
 .main-slider {
   padding: 0;
+
   .arrow {
     @include arrow;
   }
@@ -173,11 +173,10 @@ header {
   .next {
     right: 2%;
   }
+  img {
+    width: 100%;
+  }
   .slick-slide {
-
-    img {
-      width: 100%;
-    }
     .description {
       font-family: $font2;
       color: $color-text2;
