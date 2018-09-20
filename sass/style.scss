@@ -6,9 +6,11 @@ body {
   width: 100%;
   font-size: $font-size;
 }
- .more, .meet, .our-gallery, .news, .address {
+
+.more, .meet, .our-gallery, .news, .address {
   padding: 5% 0;
 }
+
 .strip {
   padding: 0;
   height: 2px;
@@ -161,6 +163,7 @@ header {
     }
   }
 }
+
 .main-slider {
   padding: 0;
 
@@ -487,7 +490,7 @@ header {
     }
   }
   .filter-button {
-    @include button-a($size: 1.4em, $padding: 11px 20px, $color: $color-text3, $back-color: #f8f8f8, $margin: 0 5px 5% );
+    @include button-a($size: 1.4em, $padding: 11px 20px, $color: $color-text3, $back-color: #f8f8f8, $margin: 0 5px 5%);
   }
 
   .port-image {
@@ -625,7 +628,7 @@ header {
 .address {
   background-color: #f5f5f5;
   .cap {
-    @include cap($align: left, $margin:0 0 20px );
+    @include cap($align: left, $margin: 0 0 20px);
   }
   .text {
     @include text;

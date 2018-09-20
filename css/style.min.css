@@ -138,8 +138,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .features .cap span{width:4em}
 }
-.features .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.features .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.features .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.features .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .features .tabl .block{margin-bottom:20px}
 .features .tabl .block .descr,.features .tabl .block .icon{display:inline-block;vertical-align:middle}
 .features .tabl .block .icon{margin:15px 0}
@@ -183,8 +183,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .courses .cap span{width:4em}
 }
-.courses .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.courses .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.courses .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.courses .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .courses .cards .block{box-shadow:0 4px 0 0 rgba(0,0,0,.1);margin-bottom:10px}
 .courses .cards .block .circle{position:absolute;color:#fff;font:2.4em "Open Sans",sans-serif;top:20px;left:35px;padding:13px 10px;border-radius:50%}
 .courses .cards .block img{width:100%;border-radius:10px 10px 0 0;border-bottom:solid 5px}
@@ -208,7 +208,7 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 .courses .cards .cour:nth-child(4) .block .button a:hover,.courses .cards .cour:nth-child(4) .block .circle{background-color:#84bed6}
 .courses .cards .cour:nth-child(4) .block img{border-color:#84bed6}
 .courses .cards .cour:nth-child(4) .block .more-courses a:hover,.courses .cards .cour:nth-child(4) .block h3{color:#84bed6}
-.meet{background:url(../img/backmeet.png?1809201110)}
+.meet{background:url(../img/backmeet.png?1809201220)}
 .meet .cap{display:block;text-align:center;margin:0 0 50px 0}
 .meet .cap .left,.meet .cap .right,.meet .cap h1{display:inline-block}
 .meet .cap h1{font:3.6em Dosis,sans-serif;color:#ea7066;font-weight:700}
@@ -219,8 +219,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .meet .cap span{width:4em}
 }
-.meet .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.meet .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.meet .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.meet .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .meet .cap h1{color:#fff}
 @media (max-width:480px){
 .meet .cap h1{font-size:2em}
@@ -253,8 +253,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .our-gallery .cap span{width:4em}
 }
-.our-gallery .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.our-gallery .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.our-gallery .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.our-gallery .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .our-gallery .gallery_product img{width:100%;border-radius:10px}
 .our-gallery .gallery_product i{display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5em;padding:10px;border-radius:5px;border:2px solid #fff}
 .our-gallery .gallery_product:hover img{filter:brightness(50%) blur(1px)}
@@ -295,8 +295,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .news .cap span{width:4em}
 }
-.news .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.news .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.news .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.news .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .news .cards{text-align:left}
 .news .cards .block{box-shadow:0 4px 0 0 rgba(0,0,0,.1);margin-bottom:10px}
 .news .cards .block .circle{position:absolute;color:#fff;font:2.4em "Open Sans",sans-serif;top:20px;left:35px;padding:13px 10px;border-radius:50%}
@@ -337,8 +337,8 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 @media (max-width:768px){
 .address .cap span{width:4em}
 }
-.address .cap .left{background:url(../img/left.png?1809201110) no-repeat;background-size:100%}
-.address .cap .right{background:url(../img/right.png?1809201110) no-repeat;background-size:100%}
+.address .cap .left{background:url(../img/left.png?1809201220) no-repeat;background-size:100%}
+.address .cap .right{background:url(../img/right.png?1809201220) no-repeat;background-size:100%}
 .address .text{font:1.4em "Open Sans",sans-serif;color:#666;font-weight:400;display:block;width:100%}
 .address .block{display:block;margin-top:10px}
 .address .block i{display:inline-block;font-size:1.6em;margin-right:10px;vertical-align:middle;color:#fff;padding:10px;border-radius:50%}
@@ -355,7 +355,7 @@ header .row nav ul li:last-child .textmenu{border-right:none}
 .address form textarea{border-color:#84bed6}
 .address form input[type=submit]{display:inline-block;margin:0;font:1.6em "Open Sans",sans-serif;padding:15px 20px;background-color:#ea7066;border-radius:5px;color:#fff;text-transform:uppercase;box-shadow:0 4px 0 0 rgba(0,0,0,.1);float:right;border:none}
 .address form input[type=submit]:active,.address form input[type=submit]:focus,.address form input[type=submit]:hover{text-decoration:none;box-shadow:4px 4px 0 1px rgba(0,0,0,.2);background-color:#ea7066;color:#fff}
-footer{padding:5% 0;background:url(../img/backfooter.png?1809201110)}
+footer{padding:5% 0;background:url(../img/backfooter.png?1809201220)}
 footer h3{font:2em Dosis,sans-serif;color:#fff;font-weight:700;margin-bottom:40px}
 footer .about span{display:block;margin:30px 0;font:1.4em "Open Sans",sans-serif;color:#c4dbf3;font-weight:400}
 footer .links ul{padding:0}

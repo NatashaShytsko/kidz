@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('.main-slider').slick({
         infinite: true,
         prevArrow: '<button class="arrow prev"><i class="icon-left-big"></i></button>',
@@ -37,12 +36,9 @@ $(document).ready(function () {
     $(".filter-button").click(function () {
         var value = $(this).attr('data-filter');
         if (value == "all") {
-            //$('.filter').removeClass('hidden');
             $('.filter').show('1000');
         }
         else {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
             $(".filter").not('.' + value).hide();
             $('.filter').filter('.' + value).hide();
             $('.filter').filter('.' + value).show('1000');
